@@ -1,0 +1,448 @@
+:root{
+  --color-darkblue: #03045E;
+  --color-darkbrown: #474306;
+  --color-yellow: #F5EE84;
+  --color-lightyellow: #FBF8CC;
+
+  --fw-400: 400;
+  --fw-500: 500;
+  --fw-600: 600;
+  --fw-800: 800;
+
+  --fs-xsmall: 1.125rem;
+  --fs-small:  1.5rem;
+  --fs-medium: 1.75rem;
+  --fs-high: 3rem;
+  --fs-xhigh: 6.25rem;
+  --fs-resume: 1.25rem;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+html{
+  min-height: 100vh;
+  background-color: var(--color-lightyellow);
+  overflow: scroll;
+  overflow-x: hidden;
+}
+::-webkit-scrollbar {
+  width: 0;  /* Remove scrollbar space */
+  background: transparent;  /* Optional: just make scrollbar invisible */
+}
+/* Optional: show position indicator in red */
+::-webkit-scrollbar-thumb {
+  background: #FF0000;
+}
+
+/* Set core body defaults */
+body {
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+a{
+  text-decoration: none;
+  margin: 0;
+  color: var(--color-darkblue);
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+ul {
+  list-style: none;
+  padding: 0; /* Remove any default padding from the ul */
+}
+
+li {
+  text-align: center; /* Center-align the text within li */
+  margin-left: 0; /* Remove the left margin */
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+.fs-date{
+  font-size: .9375rem;
+  font-style: italic;
+}
+
+.fs-xsmall{
+  font-size: var(--fs-xsmall);
+}
+
+.fs-small{
+  font-size: var(--fs-small);
+}
+
+.fs-medium{
+  font-size: var(--fs-medium);
+}
+
+.fs-xhigh{
+  font-size: var(--fs-xhigh);
+}
+
+.fs-resume{
+  font-size: var(--fs-resume);
+}
+
+.fw-400{
+  font-weight: var(--fw-400);
+}
+.fw-500{
+  font-weight: var(--fw-500);
+}
+.fw-600{
+  font-weight: var(--fw-600);
+}
+.fw-800{
+  font-weight: var(--fw-800);
+}
+
+.color-dblue{
+  color: var(--color-darkblue);
+}
+.color-dbrown{
+  color: var(--color-darkbrown);
+}
+.color-yellow{
+  color: var(--color-yellow);
+}
+.color-lyellow{
+  color: var(--color-lightyellow);
+}
+
+body{
+  font-family: 'Poppins';
+  text-align: left;
+}
+
+header{
+  color: var(--color-darkblue);
+  margin-top: 2em;
+  margin-bottom: 4em;
+}
+
+.container{
+  max-width: 90%;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  align-items: center;
+  margin-inline: auto;
+}
+
+ul{
+  display: flex;
+}
+
+.text-nav{
+  display: flex;
+}
+
+.logo-nav{
+  display: flex;
+}
+
+.first-navigation{
+  gap: 4rem;
+}
+
+.first-navigation a{
+  color: var(--color-darkblue);
+}
+
+.second-navigation{
+  gap: 2rem;
+}
+
+.text-nav a{
+  border-bottom: 2px solid transparent;
+  transition: all ease-in .6s;
+}
+
+.text-nav a:hover,
+.text-nav a:focus{
+  border-bottom: 2px solid black;
+}
+
+.image-logos{
+  width: 25px;
+}
+
+
+
+
+.portrait{
+  min-width: 15rem;
+  width: 25rem;
+  object-fit: contain;
+  border-radius: 50%;
+  box-shadow: 10px 10px 10px var(--color-darkblue);
+  margin-bottom: 1em;
+}
+
+.job-title{
+  line-height: 116%;
+  max-width: 700px;
+  margin-top: .25rem;
+}
+
+.current-location{
+  margin-top: .25em;
+}
+
+.resume-button{
+  margin-top: 3rem;
+  padding: .5em 1em;
+  background: var(--color-yellow);
+  border-radius: 10px;
+  line-height: 3em;
+  margin-top: 1em;
+}
+
+.resume-button:hover{
+  box-shadow: 5px 5px 5px var(--color-darkblue);
+  transition: .8s;
+}
+
+.about-title{
+  margin-top: 2.5rem;
+}
+
+.about-description{
+  max-width: 45em;
+  line-height: 44px; 
+  margin-bottom: 3em;
+}
+
+.modified-container{
+  flex-direction: column;
+  align-items: center;
+}
+
+.title-and-bulletpoint{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: -1.5em;
+}
+
+.column-description{
+  max-width: 55rem;
+  margin-bottom: 1.5em;
+}
+
+.project-section{
+  display: flex;
+  flex-direction: column;
+  gap: .5em;
+  margin-bottom: 3em;
+}
+
+.project-section,
+.work-row{
+  width: 100%;
+}
+
+.project-image{
+  min-width: 280px;
+}
+
+.project-image,
+.contact-image{
+  min-width: 15rem;
+  width: 80%;
+  object-fit: contain;
+}
+
+.project-description{
+  max-width: 65%;
+  line-height: 32px;
+}
+
+.work-row{
+  margin-top: 3em;
+  gap: 1em;
+  display: flex;
+  justify-content: space-between;
+}
+
+.project-title-link{
+  display: flex;
+  align-items: center;
+  text-align: center;
+  gap: .5em;
+}
+.project-title-extension:hover,
+.project-title-extension:active
+{
+    color: var(--color-darkbrown);
+    transition: .5s;  
+}
+
+.project-title-extension{
+  text-decoration: underline;
+}
+
+.footer-container{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  margin-bottom: 2em;
+  max-width: 90%;
+  margin: 0 auto;
+  margin-inline: auto;
+}
+
+.footer-image-and-text{
+  display: flex;
+  gap: 2em;
+}
+
+.text-section{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.contact-description{
+  max-width: 40rem;
+}
+
+@media (max-width: 740px){
+  .title-name,
+  .about-title{
+    font-size: var(--fs-high);
+  }
+  .container{
+    flex-direction: column;
+    text-align: center;
+  }
+  .second-column{
+    order: 1;
+  }
+  .first-column{
+    order: 2;
+  }
+  .first-navigation{
+    flex-direction: column;
+    gap: 1em;
+  }
+  .job-title{
+    font-size: var(--fs-high);
+  }
+  body{
+    text-align: center;
+  }
+  .title-and-bulletpoint{
+    align-self: center;
+    margin-left: 0;
+    text-decoration: underline;
+  }
+  .title-and-bulletpoint img{
+    display: none;
+  }
+  .column{
+    text-align: center;
+  }
+  .title-and-bulletpoint{
+    align-items: center;
+    justify-content: center;
+  }
+  .work-row{
+    flex-direction: column;
+  }
+  .project-section{
+    justify-content: center;
+    align-items: center;
+  }
+  .project-title{
+    order: -1;
+  }
+  .project-title-link{
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer-image-and-text{
+    flex-direction: column;
+  }
+  .contact-description{
+    margin-bottom: 3em;
+  } 
+  .footer-container{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  .footer-image-and-text{
+    flex-direction: column;
+    align-items: center;
+  }
+  .text-section{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+}
